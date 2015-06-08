@@ -17,18 +17,18 @@ shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
             h4('If you bake at an elevation of 3000 feet or more, 
-               answer the questions below using your recipe.'),
+               answer the questions below using the information in your recipe.'),
             
             h4('The adjusted time and temperature you should use will be on the right.'),
             br(),
             
-            radioButtons("chocolate", "Is this a chocolate item or delicate batter?",
+            radioButtons("chocolate", "Is this a chocolate or delicate batter?",
                          c("Yes" = "1",
                            "No" = "2"), "2"),
             
-            numericInput('minutes', 'Bake time (in minutes):', "60"),
+            numericInput('minutes', 'Enter bake time (in minutes):', "60"),
             
-            numericInput('temp', 'Bake temperature (in Fahrenheit degrees):', "325"),
+            numericInput('temp', 'Enter bake temperature (in Fahrenheit degrees):', "325"),
             
             helpText('IMPORTANT: This app is in beta.  Use at your own risk.')
         ),
